@@ -7,7 +7,7 @@ const Navbar = () => {
       <Container>
         <Stack
           direction="row"
-          marginTop="20px"
+          paddingTop="20px"
           justifyContent="space-between"
           alignContent="center"
         >
@@ -17,17 +17,16 @@ const Navbar = () => {
           >Grocery<span
             className="text-emerald-500"
           >Store</span></Typography>
-
           <Box sx={{
             display: "flex",
             gap: "20px"
           }}>
             <Button color="inherit"><Link href={'/'}>Home</Link></Button >
-            <Button color="inherit"><Link href={'/'}>Categories</Link></Button >
-            <Button color="inherit"><Link href={'/'}>Products</Link></Button >
-            <Button color="inherit"><Link href={'/'}>Flash Sale</Link></Button >
-            <Button color="inherit"><Link href={'/'}>About Us</Link></Button >
-            <Button color="inherit"><Link href={'/'}>Contact Us</Link></Button >
+            <Button color="inherit"><Link href={'/categories'}>Categories</Link></Button >
+            <Button color="inherit"><Link href={'/products'}>Products</Link></Button >
+            <Button color="inherit"><Link href={'/flashsale'}>Flash Sale</Link></Button >
+            <Button color="inherit"><Link href={'/aboutus'}>About Us</Link></Button >
+            <Button color="inherit"><Link href={'/contactus'}>Contact Us</Link></Button >
           </Box>
         </Stack>
       </Container>
