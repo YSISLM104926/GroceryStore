@@ -1,15 +1,17 @@
 import { Box, Typography } from '@mui/material'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
 import FlashSaleHomeCards from '../../Messycomponents/FlashSaleHomeCards'
 
 const ProductCard = ({ flashsaledata }: { flashsaledata: any }) => {
 
+
+
     return (
         <>
 
-            <div className="mt-20">
+            <div className="mt-20 w-3/4 mx-auto">
                 <Box
                     display="flex"
                     justifyContent="space-between"
@@ -21,13 +23,15 @@ const ProductCard = ({ flashsaledata }: { flashsaledata: any }) => {
                 </Box>
                 <div className="grid grid-cols-1 gy-4 md:grid-cols-2 lg:grid-cols-4">
                     {
-                        flashsaledata.map((fdata: any) =>
-                            fdata?.flashsale &&
-                            <FlashSaleHomeCards
-                                key={fdata._id}
-                                fdata={fdata}
-                            />
-                        )
+                        flashsaledata
+                            .filter((fdata: any) => fdata.flashsale === true)
+                            .slice(0, 4)
+                            .map((fdata: any) => (
+                                <FlashSaleHomeCards
+                                    key={fdata._id}
+                                    fdata={fdata}
+                                />
+                            ))
                     }
                 </div>
 

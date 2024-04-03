@@ -8,7 +8,7 @@ import { useEffect } from "react"
 import Glide from "@glidejs/glide"
 const Hero = () => {
   useEffect(() => {
-    const slider = new Glide(".glide-01", {
+    const slider = new Glide(".glide-06", {
       type: "carousel",
       focusAt: "center",
       perView: 1,
@@ -24,19 +24,19 @@ const Hero = () => {
   return (
 
     <>
-      <div className="glide-01 relative w-full overflow-hidden rounded bg-white shadow-xl shadow-slate-200 mt-10">
+      <div className="glide-06 relative w-3/4 mx-auto overflow-hidden rounded-lg mt-10">
         {/*    <!-- Slides --> */}
         <div className="overflow-hidden" data-glide-el="track">
           <ul className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-0">
             <li>
               <Image src={bannerImg1} alt="banner image"
-                width={1200}
+                width={1500}
                 height={200}
               />
             </li>
             <li>
               <Image src={bannerImg2} alt="banner image"
-                width={1200}
+                width={1500}
                 height={200}
               />
             </li>

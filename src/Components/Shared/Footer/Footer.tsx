@@ -1,9 +1,8 @@
-import { Container } from "@mui/material"
 
 const Footer = () => {
   return (
-    <Container>
-      <footer className="footer p-10 bg-emerald-100 text-base-content">
+    <>
+      <footer className="footer p-10 w-3/4 mx-auto text-base-content">
         <nav>
           <h6 className="footer-title">Services</h6>
           <a className="link link-hover">Branding</a>
@@ -27,7 +26,7 @@ const Footer = () => {
           </div>
         </nav>
       </footer>
-    </Container>
+    </>
   )
 }
 

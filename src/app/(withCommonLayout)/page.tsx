@@ -1,26 +1,33 @@
 import React from 'react';
 import Hero from '@/Components/UI/HomePage/Hero/Hero';
-import { Container } from '@mui/material';
 import TopCategoriesCard from '@/Components/UI/HomePage/TopCategoriesCard/TopCategoriesCard';
-import ProductsPage from './products/products';
 import ProductCard from '@/Components/UI/HomePage/ProductCard/ProductCard';
+import PopularProduct from '@/Components/UI/HomePage/PopularProduct/PopularProduct';
 
 
 const HomePage = async () => {
-  const res = await fetch('http://localhost:5000/flashsale', {
+  const resOne = await fetch('http://localhost:5000/flash-sale', {
     next: {
       revalidate: 30
     }
   });
-  const flashsaledata = await res.json();
-  console.log(flashsaledata)
+  const flashsaledata = await resOne.json();
+
+  const resTwo = await fetch('http://localhost:5000/top-products', {
+    next: {
+      revalidate: 30
+    }
+  });
+  const populardata = await resTwo.json();
   return (
-    <Container>
+
+    <>
       <Hero />
-      <ProductCard flashsaledata={flashsaledata}/>
+      <ProductCard flashsaledata={flashsaledata} />
       <TopCategoriesCard />
-      <ProductsPage />
-    </Container>
+      <PopularProduct populardata={populardata}/>
+    </>
+
   );
 }
 
