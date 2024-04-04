@@ -6,14 +6,14 @@ import PopularProduct from '@/Components/UI/HomePage/PopularProduct/PopularProdu
 
 
 const HomePage = async () => {
-  const resOne = await fetch('http://localhost:5000/flash-sale', {
+  const resOne = await fetch('https://grocery-store-backend-olive.vercel.appflash-sale', {
     next: {
       revalidate: 30
     }
   });
   const flashsaledata = await resOne.json();
 
-  const resTwo = await fetch('http://localhost:5000/top-products', {
+  const resTwo = await fetch('https://grocery-store-backend-olive.vercel.apptop-products', {
     next: {
       revalidate: 30
     }

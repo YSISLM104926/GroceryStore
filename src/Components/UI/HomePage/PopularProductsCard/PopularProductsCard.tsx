@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import { IoMdAddCircleOutline } from 'react-icons/io'
 
-const PopularProductsCard = async({ pdata }: { pdata: any }) => {
+const PopularProductsCard = async ({ pdata }: { pdata: any }) => {
 
     return (
         <>
@@ -16,7 +16,9 @@ const PopularProductsCard = async({ pdata }: { pdata: any }) => {
                         alt="flashsaleimages" />
                 </div>
                 <div className="w-76 mt-4">
-                    <h1>{pdata.title}</h1>
+                    <div className='flex gap-4 items-center'>
+                        <h1>{pdata.title}</h1> <h1 className='text-sm bg-green-400 text-green-700 px-2 rounded-xl font-bold'>{pdata.category}</h1>
+                    </div>
                     <div className='flex justify-between items-center'>
                         <div className='flex gap-2'>
                             <div><s>${pdata.prevPrice}</s></div>

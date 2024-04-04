@@ -1,5 +1,6 @@
 "use client"
 import { Container } from '@mui/material';
+import Link from 'next/link';
 import React from 'react';
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 
@@ -47,7 +48,9 @@ const TopCategoriesCard = () => {
                     </div>
                 </div>
                 <div className='flex justify-center mt-10'>
-                    <button className=' btn rounded-3xl text-lg'>View All<MdOutlineKeyboardArrowRight className='size-6' /></button>
+                    <Link href={`/all-categories`} >
+                        <button className=' btn rounded-3xl text-lg'>View All<MdOutlineKeyboardArrowRight className='size-6' /></button>
+                    </Link>
                 </div>
             </Container>
         </>

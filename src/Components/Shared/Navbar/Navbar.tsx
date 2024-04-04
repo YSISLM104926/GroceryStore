@@ -4,11 +4,11 @@ import Link from "next/link"
 const Navbar = () => {
   return (
     <>
-      <Container>
+      <>
         <Stack
           direction="row"
           paddingTop="20px"
-          justifyContent="space-between"
+          justifyContent="space-around"
           alignContent="center"
         >
           <Typography
@@ -27,9 +27,11 @@ const Navbar = () => {
             <Button color="inherit"><Link href={'/flashsale'}>Flash Sale</Link></Button >
             <Button color="inherit"><Link href={'/aboutus'}>About Us</Link></Button >
             <Button color="inherit"><Link href={'/contactus'}>Contact Us</Link></Button >
+            <Button color="inherit"><Link href={'/dashboard'}>Dashboard</Link></Button >
           </Box>
+          <Button variant="outlined" color="inherit"><Link href={'/login'}>Signup</Link></Button >
         </Stack>
-      </Container>
+      </>
     </>
   )
 }
