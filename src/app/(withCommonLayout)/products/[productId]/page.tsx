@@ -4,7 +4,7 @@ import React from 'react'
 
 const page = async ({ params }: { params: any }) => {
 
-  const res = await fetch(`https://grocery-store-backend-olive.vercel.appproducts/${params.productId}`)
+  const res = await fetch(`https://grocery-store-backend-olive.vercel.app/products/${params.productId}`)
   const singleProduct = await res.json()
   console.log('ppppp',singleProduct)
   

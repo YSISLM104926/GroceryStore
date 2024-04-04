@@ -3,7 +3,7 @@ import PopularProductsCard from '@/Components/UI/HomePage/PopularProductsCard/Po
 import React from 'react'
 
 const allCategoryPage = async() => {
-    const res = await fetch('https://grocery-store-backend-olive.vercel.apptop-products')
+    const res = await fetch('https://grocery-store-backend-olive.vercel.app/top-products')
     const populardata = await res.json();
     return (
         <>

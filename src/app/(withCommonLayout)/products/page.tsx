@@ -5,7 +5,7 @@ import React from 'react'
 import { IoMdAddCircleOutline } from 'react-icons/io';
 
 const productsPage = async () => {
-  const res = await fetch('https://grocery-store-backend-olive.vercel.apptop-products', {
+  const res = await fetch('https://grocery-store-backend-olive.vercel.app/top-products', {
     next: {
       revalidate: 30
     }
@@ -69,7 +69,7 @@ const productsPage = async () => {
         <div className="grid grid-cols-1 gy-4 md:grid-cols-2 lg:grid-cols-4 w-3/4">
           {
             FlashDatas.map((flashdata: any) => (
-              <Link href={`/products/${flashdata._id}`}>
+              <Link href={`/products/${flashdata._id}`} key={flashdata._id}>
                 <div className='rounded-2xl m-4 p-4 transition-all duration-300 hover:scale-105 mt-10'
                 >
                   <div className=' overflow-hidden relative'>

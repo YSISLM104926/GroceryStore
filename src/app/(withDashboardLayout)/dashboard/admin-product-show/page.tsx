@@ -3,7 +3,7 @@ import React from 'react'
 import { ToastContainer } from 'react-toastify';
 
 const productShowPage = async () => {
-    const res = await fetch('https://grocery-store-backend-olive.vercel.apptop-products');
+    const res = await fetch('https://grocery-store-backend-olive.vercel.app/top-products');
     const TableProducts  = await res.json();
     return (
         <div className='mt-12'> 
